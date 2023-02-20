@@ -3,13 +3,12 @@
 const express= require("express");
 const app=express();
 
-app.get('/', (req, res) => {
+// app setting
+app.set("views", "./views");
+app.set("view engine", "ejs");
 
-    console.log("안녕하세요");
-    // res.json({
-    //     success: true,
-    // });
-});
-
+// routing
+const router = require("./routes/route.js");
+app.use("/", router);
 
 module.exports=app;
