@@ -39,4 +39,12 @@ router.get("/DangerousGoods/Delete", (req, res) => {
     });
 });
 
+router.get("/RadiusOfAction", (req, res) => {
+    res.render("radiusOfAction.ejs");
+});
+
+router.get("/Slip", (req, res) => {
+    res.render("slip.ejs");
+});
+
 module.exports=router;
