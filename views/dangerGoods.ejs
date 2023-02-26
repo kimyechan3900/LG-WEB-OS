@@ -5,9 +5,18 @@
   </head>
     <body>
       <h1>Dangerous Goods Page</h1>
+      <% for(var i = 0; i < name.length; i++) { %>
+        <label><%= name[i] %></label>
+        <label><%= property2[i] %></label>
+        <label><%= property3[i] %></label>
+        <label><%= property4[i] %></label>
+        <label><%= property5[i] %></label>
+        </br>
+      <% } %>
       <form>
         <button type="button" onclick="location.href='/DangerousGoods/Insert'">insert</button>
         <button type="button" onclick="location.href='/DangerousGoods/Delete'">delete</button>
+        <button type="button" onclick="location.href='/'">메인</button>
       </form>
   </body>
 </html>

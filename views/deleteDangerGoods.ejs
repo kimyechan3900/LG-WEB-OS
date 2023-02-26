@@ -8,12 +8,18 @@
 
       <form>
         <p>Goods list</p>
-        <% for(var i = 0; i < data.length; i++) { %>
+        <% for(var i = 0; i < name.length; i++) { %>
           <input id=<%= i %> type="checkbox" />
-          <label><%= data[i] %></label>
+          <label><%= name[i] %></label>
+          <label><%= property2[i] %></label>
+          <label><%= property3[i] %></label>
+          <label><%= property4[i] %></label>
+          <label><%= property5[i] %></label>
           </br>
         <% } %>
         <button>submit</button>
+        <button type="button" onclick="location.href='/'">메인</button>
+        <button type="button" onclick="location.href='/DangerousGoods'">이전</button>
       </form>
 
   </body>

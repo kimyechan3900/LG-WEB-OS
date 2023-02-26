@@ -1,0 +1,7 @@
+{
+	"name": ["goods1", "goods2", "goods3", "goods4", "goods5"],
+	"property2": ["property2_1", "property2_2", "property2_3", "property2_4", "property2_5"],
+	"property3": ["property3_1", "property3_2", "property3_3", "property3_4", "property3_5"],
+	"property4": ["property4_1", "property4_2", "property4_3", "property4_4", "property4_5"],
+	"property5": ["property5_1", "property5_2", "property5_3", "property5_4", "property5_5"]
+}

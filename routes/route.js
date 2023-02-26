@@ -3,6 +3,10 @@
 const express= require("express");
 const router=express();
 
+// 등록된 위험물건 데이터 파일에서 가져오기
+const fs = require("fs");
+const dangerousGoods = JSON.parse(fs.readFileSync("./database/dangerousGoods.json"));
+
 
 router.get('/', (req, res) => {
     res.render('main');
@@ -22,7 +26,7 @@ router.get('/SleepPattern', (req, res) => {
 });
 // DangrousGoods page
 router.get("/DangerousGoods", (req, res) => {
-    res.render("dangerGoods.ejs");
+    res.render("dangerGoods.ejs", dangerousGoods);
 });
 
 router.get("/DangerousGoods/Insert", (req, res) => {
@@ -30,13 +34,15 @@ router.get("/DangerousGoods/Insert", (req, res) => {
 });
 
 router.get("/DangerousGoods/Delete", (req, res) => {
-    res.render("deleteDangerGoods.ejs", {
-        data: ["danger goods data example1",
-        "danger goods data example3",
-        "danger goods data example4",
-        "danger goods data example5",
-        "danger goods data example6"]
-    });
+    res.render("deleteDangerGoods.ejs", dangerousGoods);
+});
+
+router.get("/RadiusOfAction", (req, res) => {
+    res.render("radiusOfAction.ejs");
+});
+
+router.get("/Slip", (req, res) => {
+    res.render("slip.ejs");
 });
 
 module.exports=router;
