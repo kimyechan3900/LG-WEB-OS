@@ -47,9 +47,9 @@ wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key a
     
 8.ares 
   create ares app
-    -ares-generate (app name)
+    -ares-generate -t (templete) (app name)
   packagin app
-    -ares-package (app name)
+    -ares-package (app name)  OR   ares-package --pkgid (app name)
   remote download app
     -ares-install --device (target device) (app id)_(version)_all.ipk
   remote execution app
